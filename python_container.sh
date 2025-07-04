@@ -38,7 +38,7 @@ pct create $CTID local:vztmpl/$TEMPLATE \
   --hostname $HOSTNAME \
   --password $PASSWORD \
   --storage $STORAGE \
-  --rootfs local:4G
+  --rootfs ${STORAGE}:vm-${CTID}-disk-0,size=${DISK_SIZE} \
 #  --rootfs ${STORAGE}:$DISK_SIZE \
   --memory $MEMORY \
   --cores $CPUS \
