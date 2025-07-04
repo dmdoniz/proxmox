@@ -4,7 +4,7 @@
 #CTID=200                             # Container-ID
 HOSTNAME="python"                    # Hostname des Containers
 PASSWORD="dasistpython"              # Root-Passwort
-STORAGE="local-lvm"                  # Speicher, z. B. local, local-lvm, etc.
+STORAGE="local"                      # Speicher, z. B. local, local-lvm, etc.
 TEMPLATE="ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
 DISK_SIZE="4G"                       # Speicherplatz
 MEMORY="2048"                        # RAM in MB
