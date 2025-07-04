@@ -38,7 +38,8 @@ pct create $CTID local:vztmpl/$TEMPLATE \
   --hostname $HOSTNAME \
   --password $PASSWORD \
   --storage $STORAGE \
-  --rootfs ${STORAGE}:$DISK_SIZE \
+  --rootfs local:4G
+#  --rootfs ${STORAGE}:$DISK_SIZE \
   --memory $MEMORY \
   --cores $CPUS \
   --net0 name=eth0,bridge=$BRIDGE,ip=$IP${GATEWAY:+,gw=$GATEWAY} \
