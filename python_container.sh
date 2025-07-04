@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ===== KONFIGURATION =====
-#CTID=101                            # Container-ID
+#CTID=200                             # Container-ID
 HOSTNAME="python"                    # Hostname des Containers
 PASSWORD="dasistpython"              # Root-Passwort
 STORAGE="local-lvm"                  # Speicher, z. B. local, local-lvm, etc.
@@ -91,7 +91,7 @@ pct exec $CTID -- bash -c "
 	read only = no
 	create mask = 0660
 	directory mask = 2770
-  EOF
+EOF
 	fi
 
   systemctl restart smbd || service smbd restart
