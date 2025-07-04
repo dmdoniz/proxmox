@@ -4,7 +4,7 @@
 #CTID=200                             # Container-ID
 HOSTNAME="python"                    # Hostname des Containers
 PASSWORD="dasistpython"              # Root-Passwort
-STORAGE="local"                      # Speicher, z. B. local, local-lvm, etc.
+STORAGE="local-lvm"                  # Speicher, z. B. local, local-lvm, etc.
 TEMPLATE="ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
 DISK_SIZE="4G"                       # Speicherplatz
 MEMORY="2048"                        # RAM in MB
@@ -38,8 +38,7 @@ pct create $CTID local:vztmpl/$TEMPLATE \
   --hostname $HOSTNAME \
   --password $PASSWORD \
   --storage $STORAGE \
-  --rootfs ${STORAGE}:vm-${CTID}-disk-0,size=${DISK_SIZE} \
-#  --rootfs ${STORAGE}:$DISK_SIZE \
+  --rootfs ${STORAGE}:$DISK_SIZE \
   --memory $MEMORY \
   --cores $CPUS \
   --net0 name=eth0,bridge=$BRIDGE,ip=$IP${GATEWAY:+,gw=$GATEWAY} \
