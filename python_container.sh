@@ -1,5 +1,5 @@
 #!/bin/bash
-v1.1
+#v1.1
 
 # ===== KONFIGURATION =====
 HOSTNAME="python"                    # Hostname des Containers
