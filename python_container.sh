@@ -35,7 +35,7 @@ echo "📦 Erstelle LXC-Container $CTID..."
 pct create $CTID local:vztmpl/$TEMPLATE \
   --hostname $HOSTNAME \
   --password $PASSWORD \
-  #--storage $STORAGE \
+  --storage $STORAGE \
   --rootfs ${STORAGE}:${DISK_SIZE} \
   --memory $MEMORY \
   --cores $CPUS \
